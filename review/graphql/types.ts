@@ -18,6 +18,6 @@ export class Book {
   @Field(() => ID)
   id: number
 
-  @Field()
-  avgRating: number
+  @Field(() => [Review])
+  reviews: Review[]
 }

@@ -3,7 +3,7 @@ import { Book } from './graphql'
 export class Repository {
   private books: Book[] = [
     { id: 1, title: 'Lorem ipsum' },
-    { id: 2, title: 'Boring book', description: 'Indeed' },
+    { id: 2, title: 'Boring book' },
   ]
 
   findMany(): Book[] {

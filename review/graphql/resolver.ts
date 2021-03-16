@@ -1,20 +1,10 @@
 import 'reflect-metadata'
-import {
-  Arg,
-  Args,
-  Directive,
-  FieldResolver,
-  Float,
-  Int,
-  Query,
-  Resolver,
-  Root,
-} from 'type-graphql'
+import { Arg, Int, Query, Resolver } from 'type-graphql'
 import { Repository } from '../repo'
 import { Review } from './types'
 import { buildReviewSchema } from './schema'
 
-@Resolver(() => Review)
+@Resolver(Review)
 export class ReviewResolver {
   private repo = new Repository()
   private typeDefs: string
